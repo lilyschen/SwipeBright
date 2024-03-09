@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/signup', (req, res) => {
-    res.json('Hello World')
+    res.json('Hello')
 })
 
 app.get('/users', async (req, res) => {
