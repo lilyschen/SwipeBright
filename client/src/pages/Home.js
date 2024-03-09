@@ -6,15 +6,15 @@ const Home = () => {
         console.log("clicked");
     }
     return (
-        <>
-            <Nav/>
+        <div className="overlay">
+            <Nav minimal={false} authToken={authToken}/>
             <div className="home">
                 <h1>Swipe Bright@</h1>
                 <button className="primary-button" onClick={handleClick}>
                     {authToken ? 'Signout' : 'Create Account'}
                 </button>
             </div>
-        </>
+        </div>
     )
 }
 export default Home
