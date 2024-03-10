@@ -17,6 +17,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.4.0",
     "nodemon": "^3.1.0",
+    "react-tinder-card": "^1.6.4",
     "uuid": "^9.0.1"
   }
 }
