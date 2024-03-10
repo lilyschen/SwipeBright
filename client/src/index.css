@@ -4,10 +4,20 @@
 html, body {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 * {
     font-family: 'Readex Pro', sans-serif;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.primary-title {
+    font-size: 90px;
+    color: rgb(255,255,255);
 }
 
 .primary-button {
@@ -41,9 +51,6 @@ html, body {
     border: solid 2px rgb(48, 48, 48);
 }
 
-body {
-    text-align: center;
-}
 
 /*----- Navbar -----*/
 nav {
@@ -80,7 +87,11 @@ nav .logo-container .logo {
     to bottom,
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0) 100%
-    )
+    ), url("images/book-background.jpeg");
+}
+
+.home {
+    margin-top: 40px;
 }
 
 
