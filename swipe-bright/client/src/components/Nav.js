@@ -1,5 +1,3 @@
-import logo from '../images/tinder logo.png'
-import colorLogo from '../images/Tinder-logo.png'
 const Nav = ({ minimal, setShowModal, showModal, setIsSignUp }) => {
 
     const handleClick = () => {

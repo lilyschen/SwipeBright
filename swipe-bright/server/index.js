@@ -48,7 +48,7 @@ app.post('/signup', async (req, res) => {
         const insertedUser = await users.insertOne(data)
 
         const token = jwt.sign(insertedUser, sanitizedEmail, {
-            expiresIn: 60 * 24
+            // expiresIn: 60 * 24
         })
         res.status(201).json({token, userId: generatedUserId})
 
@@ -75,15 +75,17 @@ app.post('/login', async (req, res) => {
 
         if (user && correctPassword) {
             const token = jwt.sign(user, email, {
-                expiresIn: 60 * 24
-            })
-            res.status(201).json({token, userId: user.user_id})
+                // expiresIn: 60 * 24
+            });
+            return res.status(201).json({token, userId: user.user_id});
+        } else {
+            // Now the response will be sent only if the credentials are not correct
+            return res.status(400).json('Invalid Credentials');
         }
-
-        res.status(400).json('Invalid Credentials')
 
     } catch (err) {
         console.log(err)
+        return res.status(500).json('Internal Server Error');
     } finally {
         await client.close()
     }
