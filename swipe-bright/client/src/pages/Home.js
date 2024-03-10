@@ -1,5 +1,6 @@
 import Nav from '../components/Nav'
 import AuthModal from "../components/AuthModal";
+import logo from '../images/logo.png'
 import {useState} from "react";
 
 const Home = () => {
@@ -22,7 +23,8 @@ const Home = () => {
                 showModal={showModal}
                 setIsSignUp={setIsSignUp}/>
             <div className="home">
-                <h1 className="primary-title">Swipe Bright</h1>
+                {/* <h1 className="primary-title">Swipe Bright</h1> */}
+                <img src={logo} alt="Swipe Bright Logo" className="primary-logo" />
                 <button className="primary-button" onClick={handleClick}>
                     {authToken ? 'Signout' : 'Create Account'}
                 </button>
