@@ -251,7 +251,7 @@ nav .logo-container .logo {
 
 .card {
     background-color: #fff;
-    width: 400px;
+    width: 500px;
     height: 650px;
     border-radius: 30px;
     background-size: cover;
@@ -332,4 +332,20 @@ nav .logo-container .logo {
     padding: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.match-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    cursor: pointer; 
+  }
+
+
+.img-container {
+  height: 40px; 
+  width: 40px; 
+  border-radius: 20px; 
+  overflow: hidden;
+  margin-right: 10px; 
 }
