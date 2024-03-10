@@ -19,19 +19,19 @@ const Dashboard = () => {
     const characters  = [
         {
             name: "Saharah Bains",
-            url: './images.icon'
+            url: './images/icon.jpg'
         },
         {
             name: "Michelle Lei",
-            url: './images.icon'
+            url: './images/icon.jpg'
         },
         {
             name: "Allison F",
-            url: './images.icon'
+            url: './images/icon.jpg'
         },
         {
             name: "Lily Chen",
-            url: './images.icon'
+            url: './images/icon.jpg'
         }
     ]
 
@@ -40,7 +40,6 @@ const Dashboard = () => {
             <ChatContainer/>
             <div className="swiper-container">
                 <div className="card-container">
-                    <h2> DASHBOARD </h2>
 
                     {characters.map((character) =>
                         <TinderCard
