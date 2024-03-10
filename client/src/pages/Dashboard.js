@@ -1,64 +1,49 @@
-import React, { useState } from 'react'
-import TinderCard from "react-tinder-card";
+import React, { useState } from 'react';
 import ChatContainer from "../components/ChatContainer";
 
 const Dashboard = () => {
+    const [characters, setCharacters] = useState([
+        {id: 1, name: "Saharah Bains", url: ".images/icon.jpeg", swiped: false },
+        { id: 2, name: "Michelle Lei", url: ".images/icon.jpeg", swiped: false },
+        { id: 3, name: "Allison F", url: ".images/icon.jpeg", swiped: false },
+        { id: 4, name: "Lily Chen", url: ".images/icon.jpeg", swiped: false }
+    ]);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const [lastDirection, setLastDirection] = useState()
+    const handleSwipeLeft = () => {
+        const updatedCharacters = [...characters];
+        updatedCharacters.splice(currentIndex, 1);
+        setCharacters(updatedCharacters);
+    };
 
-    const swiped = (direction, nameToDelete) => {
-        console.log('removing: ' + nameToDelete)
-        setLastDirection(direction)
-    }
-
-    const outOfFrame = (name) => {
-        console.log(name + ' left the screen!')
-    }
-
-
-    const characters  = [
-        {
-            name: "Saharah Bains",
-            url: './images/icon.jpg'
-        },
-        {
-            name: "Michelle Lei",
-            url: './images/icon.jpg'
-        },
-        {
-            name: "Allison F",
-            url: './images/icon.jpg'
-        },
-        {
-            name: "Lily Chen",
-            url: './images/icon.jpg'
-        }
-    ]
+    const handleSwipeRight = () => {
+        const updatedCharacters = [...characters];
+        updatedCharacters[currentIndex].swiped = true;
+        setCharacters(updatedCharacters);
+    };
 
     return (
         <div className="dashboard">
             <ChatContainer/>
-            <div className="swiper-container">
-                <div className="card-container">
-
-                    {characters.map((character) =>
-                        <TinderCard
-                            className='swipe'
-                            key={character.name}
-                            onSwipe={(dir) => swiped(dir, character.name)}
-                            onCardLeftScreen={() => outOfFrame(character.name)}>
-                            <div style={{ backgroundImage: 'url(' + character.url + ')' }}
-                                 className='card'>
-                                <h3>{character.name}</h3>
-                            </div>
-                        </TinderCard>
-                    )}
-                    <div className="swipe-info">
-                        {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
+            <div className="swipe-container">
+            <div className="card-container">
+                {characters.length > 0 && (
+                    <div key={characters[currentIndex].id} className="card">
+                        <h3>{characters[currentIndex].name}</h3>
+                        <img src={characters[currentIndex].url} alt={characters[currentIndex].name} />
+                        <div className="swipe-options">
+                            <button onClick={handleSwipeLeft}>Swipe Left</button>
+                            <button onClick={handleSwipeRight}>Swipe Right</button>
+                        </div>
                     </div>
-                </div>
+                )}
+                {characters.length === 0 && (
+                    <div>No more characters to swipe!</div>
+                )}
+            </div>
             </div>
         </div>
-    )
-}
-export default Dashboard
+    );
+};
+
+export default Dashboard;

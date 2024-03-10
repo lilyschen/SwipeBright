@@ -212,15 +212,22 @@ nav .logo-container .logo {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
 .swipe {
     position: absolute;
 }
 
+.swiper {
+
+}
+
 .dashboard .card-container {
     width: 400px;
     height: 650px;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -232,7 +239,8 @@ nav .logo-container .logo {
 }
 
 .card h3 {
-    margin-top: 0;
+    margin-top: 0
+;
 }
 
 .dashboard .swipe-info {
@@ -296,7 +304,7 @@ nav .logo-container .logo {
 .chat-display,
 .matches-display {
     padding: 20px;
-    height: 60vh;
+    height: 50vh;
     overflow-y: auto;
 }
 
