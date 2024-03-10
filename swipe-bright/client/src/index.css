@@ -333,3 +333,19 @@ nav .logo-container .logo {
     display: flex;
     flex-direction: column;
 }
+
+.match-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    cursor: pointer; 
+  }
+
+
+.img-container {
+  height: 40px; 
+  width: 40px; 
+  border-radius: 20px; 
+  overflow: hidden;
+  margin-right: 10px; 
+}
