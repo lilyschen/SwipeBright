@@ -86,7 +86,7 @@ const Onboarding = () => {
                         value={formData.about}
                         onChange={handleChange}
                     />
-                    <label>Classes you are willing to Teach:</label>
+                    <label>Classes I can help with:</label>
                     <div className="multiple-input-container">
                         <input
                             id="strength_class"
@@ -117,7 +117,7 @@ const Onboarding = () => {
                         <label htmlFor="strength_class">CPSC 210</label>
                     </div>
 
-                    <label>Classes you want to help with:</label>
+                    <label>Classes I want to help with:</label>
                     <div className="multiple-input-container">
                         <input
                             id="weak_class"
