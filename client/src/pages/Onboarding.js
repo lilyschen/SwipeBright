@@ -4,23 +4,35 @@ import Nav from '../components/Nav'
 
 const Onboarding = () => {
 
-    const [formData] = useState({
+    const [formData, setFormData] = useState({
+        user_id: "",
+        email: "",
         first_name: "",
         school: "",
         about: "",
-        strength_class: "man",
-        weak_class: "woman",
+        strength_class: "",
+        weak_class: "",
         url: "",
         matches: []
     })
 
-    const handleChange = () => {
-        console.log('change')
-    }
-
     const handleSubmit = () => {
         console.log('submitted.')
     }
+
+    const handleChange = (e) => {
+        console.log('e', e)
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+        const name = e.target.name
+
+        setFormData((prevState) => ({
+            ...prevState,
+            [name] : value
+        }))
+    }
+
+    console.log(formData)
+
     return (
         <>
             <Nav
@@ -40,7 +52,7 @@ const Onboarding = () => {
                         name="first_name"
                         placeholder="First name"
                         required={true}
-                        value={""}
+                        value={formData.first_name}
                         onChange={handleChange}
                     />
                     <label htmlFor="school">School</label>
@@ -50,7 +62,7 @@ const Onboarding = () => {
                         name="school"
                         placeholder="School"
                         required={true}
-                        value={""}
+                        value={formData.school}
                         onChange={handleChange}
                     />
 
@@ -61,14 +73,14 @@ const Onboarding = () => {
                         name="about"
                         placeholder="I am currently studying... "
                         required={true}
-                        value={""}
+                        value={formData.about}
                         onChange={handleChange}
                     />
                     <label>Classes you are willing to Teach:</label>
                     <div className="multiple-input-container">
                         <input
                             id="strength_class"
-                            type="checkbox"
+                            type="radio"
                             name="strength_class"
                             value="CPSC_110"
                             onChange={handleChange}
@@ -77,7 +89,7 @@ const Onboarding = () => {
                         <label htmlFor="strength_class">CPSC 110</label>
                         <input
                             id="strength_class"
-                            type="checkbox"
+                            type="radio"
                             name="strength_class"
                             value="CPSC_121"
                             onChange={handleChange}
@@ -86,7 +98,7 @@ const Onboarding = () => {
                         <label htmlFor="strength_class">CPSC 121</label>
                         <input
                             id="strength_class"
-                            type="checkbox"
+                            type="radio"
                             name="strength_class"
                             value="CPSC_210"
                             onChange={handleChange}
@@ -99,7 +111,7 @@ const Onboarding = () => {
                     <div className="multiple-input-container">
                         <input
                             id="weak_class"
-                            type="checkbox"
+                            type="radio"
                             name="weak_class"
                             value="CPSC_110"
                             onChange={handleChange}
@@ -108,7 +120,7 @@ const Onboarding = () => {
                         <label htmlFor="weak_class">CPSC 110</label>
                         <input
                             id="weak_class"
-                            type="checkbox"
+                            type="radio"
                             name="weak_class"
                             value="CPSC_121"
                             onChange={handleChange}
@@ -117,7 +129,7 @@ const Onboarding = () => {
                         <label htmlFor="weak_class">CPSC 121</label>
                         <input
                             id="weak_class"
-                            type="checkbox"
+                            type="radio"
                             name="weak_class"
                             value="CPSC_210"
                             onChange={handleChange}
@@ -139,11 +151,11 @@ const Onboarding = () => {
                         required={true}
                     />
                     <div className="photo-container">
+                        <img src={formData.url} alt="profile pic preview"/>
                     </div>
                 </section>
 
             </form>
-
         </div>
         </>
     )
