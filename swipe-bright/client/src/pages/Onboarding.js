@@ -88,65 +88,67 @@ const Onboarding = () => {
                     />
                     <label>Classes I can help with:</label>
                     <div className="multiple-input-container">
-                        <input
-                            id="strength_class"
-                            type="radio"
-                            name="strength_class"
-                            value="CPSC_110"
-                            onChange={handleChange}
-                            checked={formData.strength_class === "CPSC_110"}
-                        />
-                        <label htmlFor="strength_class">CPSC 110</label>
-                        <input
-                            id="strength_class"
-                            type="radio"
-                            name="strength_class"
-                            value="CPSC_121"
-                            onChange={handleChange}
-                            checked={formData.strength_class === "CPSC_121"}
-                        />
-                        <label htmlFor="strength_class">CPSC 121</label>
-                        <input
-                            id="strength_class"
-                            type="radio"
-                            name="strength_class"
-                            value="CPSC_210"
-                            onChange={handleChange}
-                            checked={formData.strength_class === "CPSC_210"}
-                        />
-                        <label htmlFor="strength_class">CPSC 210</label>
+                    <input
+                        id="strength_class_110"
+                        type="radio"
+                        name="strength_class"
+                        value="CPSC_110"
+                        onChange={handleChange}
+                        checked={formData.strength_class === "CPSC_110"}
+                    />
+                    <label htmlFor="strength_class_110">CPSC 110</label>
+                    <input
+                        id="strength_class_121"
+                        type="radio"
+                        name="strength_class"
+                        value="CPSC_121"
+                        onChange={handleChange}
+                        checked={formData.strength_class === "CPSC_121"}
+                    />
+                    <label htmlFor="strength_class_121">CPSC 121</label>
+                    <input
+                        id="strength_class_210"
+                        type="radio"
+                        name="strength_class"
+                        value="CPSC_210"
+                        onChange={handleChange}
+                        checked={formData.strength_class === "CPSC_210"}
+                    />
+                    <label htmlFor="strength_class_210">CPSC 210</label>
                     </div>
 
-                    <label>Classes I want to help with:</label>
+
+                    <label>Classes I want help with:</label>
                     <div className="multiple-input-container">
-                        <input
-                            id="weak_class"
-                            type="radio"
-                            name="weak_class"
-                            value="CPSC_110"
-                            onChange={handleChange}
-                            checked={formData.weak_class === "CPSC_110"}
-                        />
-                        <label htmlFor="weak_class">CPSC 110</label>
-                        <input
-                            id="weak_class"
-                            type="radio"
-                            name="weak_class"
-                            value="CPSC_121"
-                            onChange={handleChange}
-                            checked={formData.weak_class === "CPSC_121"}
-                        />
-                        <label htmlFor="weak_class">CPSC 121</label>
-                        <input
-                            id="weak_class"
-                            type="radio"
-                            name="weak_class"
-                            value="CPSC_210"
-                            onChange={handleChange}
-                            checked={formData.weak_class === "CPSC_210"}
-                        />
-                        <label htmlFor="weak_class">CPSC 210</label>
+                    <input
+                        id="weak_class_110"
+                        type="radio"
+                        name="weak_class"
+                        value="CPSC_110"
+                        onChange={handleChange}
+                        checked={formData.weak_class === "CPSC_110"}
+                    />
+                    <label htmlFor="weak_class_110">CPSC 110</label>
+                    <input
+                        id="weak_class_121"
+                        type="radio"
+                        name="weak_class"
+                        value="CPSC_121"
+                        onChange={handleChange}
+                        checked={formData.weak_class === "CPSC_121"}
+                    />
+                    <label htmlFor="weak_class_121">CPSC 121</label>
+                    <input
+                        id="weak_class_210"
+                        type="radio"
+                        name="weak_class"
+                        value="CPSC_210"
+                        onChange={handleChange}
+                        checked={formData.weak_class === "CPSC_210"}
+                    />
+                    <label htmlFor="weak_class_210">CPSC 210</label>
                     </div>
+
 
                     <input type="submit"/>
                 </section>

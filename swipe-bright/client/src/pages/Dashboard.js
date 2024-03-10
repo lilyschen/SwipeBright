@@ -43,7 +43,7 @@ const Dashboard = () => {
         if (user) {
             getClassedUsers()
         }
-    }, [user, classedUsers])
+    }, [user])
 
     const updateMatches = async (matchedUserId) => {
         try {
