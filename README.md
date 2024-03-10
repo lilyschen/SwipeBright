@@ -12,6 +12,13 @@ Welcome to SwipeBright! SwipeBright is a web application designed to facilitate 
 - User Profiles: Each user has a profile showcasing their courses or skills they offer and those they wish to learn.
 - Chat Functionality: Matched users can chat with each other to discuss further details about the courses or skills they want to exchange.
 
+### Installation
+To install SwipeBright locally, follow these steps:
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up environment variables (e.g., MongoDB URI).
+4. Start the server: `npm start`
+   
 ### Getting Started
 
 To get started with SwipeBright, follow these steps:
@@ -26,9 +33,3 @@ To get started with SwipeBright, follow these steps:
 - Backend: Node.js
 - Database: MongoDB
 
-### Installation
-To install SwipeBright locally, follow these steps:
-1. Clone the repository
-2. Install dependencies: npm install
-3. Set up environment variables (e.g., MongoDB URI).
-4. Start the server: npm start
